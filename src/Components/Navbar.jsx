@@ -1,45 +1,75 @@
 import { useState } from "react";
 import { Link } from "react-scroll";
+import Logo from "../assets/white_logo.png"
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 w-full bg-white shadow-md z-50">
-      <div className="container mx-auto flex justify-between items-center p-4">
-        {/* Logo */}
-        <div className="text-xl font-bold">MySite</div>
+    <>
+      {/* Blur Background when menu is open */}
+      {isOpen && (
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-md z-40" 
+          onClick={() => setIsOpen(false)}
+        />
+      )}
+      
+      <nav className="fixed top-0 w-full z-50 text-white bg-transparent">
+        <div className="container mx-auto flex justify-between items-center p-4">
+          {/* Logo */}
+          <img src={Logo} className="h-10" alt="Logo" />
+          
+          {/* Hamburger Menu (Mobile) - Hidden when menu is open */}
+          {!isOpen && (
+            <button 
+              className="md:hidden text-3xl focus:outline-none" 
+              onClick={() => setIsOpen(true)}
+              aria-label="Open menu"
+            >
+              ☰
+            </button>
+          )}
+        </div>
 
-        {/* Hamburger Menu (Mobile) */}
-        <button
-          className="md:hidden text-2xl focus:outline-none"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          ☰
-        </button>
+        {/* Close Button - Positioned where the hamburger was */}
+        {isOpen && (
+          <button 
+            className="fixed top-4 right-6 text-3xl text-white focus:outline-none z-50"
+            onClick={() => setIsOpen(false)}
+            aria-label="Close menu"
+          >
+            ✖
+          </button>
+        )}
 
-        {/* Nav Links (Desktop & Mobile) */}
-        <ul
-          className={`md:flex md:space-x-6 absolute md:static bg-white md:bg-transparent w-full left-0 top-16 md:w-auto md:py-0 py-4 md:shadow-none shadow-lg transition-all ${
-            isOpen ? "block" : "hidden"
+        {/* Mobile Menu */}
+        <div 
+          className={`fixed inset-0 flex items-center justify-center transition-transform duration-300 ${
+            isOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
-          {["home", "about", "team", "contact"].map((section) => (
-            <li key={section} className="text-center md:text-left">
-              <Link
-                to={section}
-                smooth={true}
-                duration={500}
-                className="block py-2 px-4 text-gray-800 hover:text-blue-600 cursor-pointer"
-                onClick={() => setIsOpen(false)} // Close menu on click
-              >
-                {section.charAt(0).toUpperCase() + section.slice(1)}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </nav>
+          <div className="bg-gray-900 text-white rounded-lg w-3/4 max-w-sm p-6 text-center shadow-lg">
+            {/* Menu Items */}
+            <ul className="flex flex-col space-y-4 mt-8">
+              {["home", "about", "team", "contact"].map((section) => (
+                <li key={section}>
+                  <Link
+                    to={section}
+                    smooth={true}
+                    duration={500}
+                    className="text-lg hover:text-blue-400 cursor-pointer"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {section.charAt(0).toUpperCase() + section.slice(1)}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </>
   );
 };
 
