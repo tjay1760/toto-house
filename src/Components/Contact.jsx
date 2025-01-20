@@ -3,16 +3,16 @@ import ContactPhoto from  "../assets/bottom_art.png"
 
 const Contact = () => {
   return (
-    <div className=' bg-green-900 flex relative items-center justify-center text-white py-10'>
-      <img src={ContactPhoto} className='h-96 absolute left-0 bottom-0' alt="Contact" />
-      <div className="details flex flex-col gap-10  justify-between">
+    <div className='contact bg-green-900 flex flex-col sm:flex-row relative items-center justify-center text-white pt-10 md:py-10'>
+      <div className="details flex flex-col gap-10 justify-between items-center text-center">
         <h1 className='font-bold text-3xl'>Be The First To Know!</h1>
-        <div className="items">
-        <input type="email" placeholder="Enter your email" className="mt-2 p-2 rounded" />
-        <button className="py-2 px-8 bg-yellow-400 text-white font-bold rounded">JOIN</button>
+        <div className="flex flex-col sm:flex-row gap-4 items-center">
+          <input type="email" placeholder="Enter your email" className="p-2 rounded text-black" />
+          <button className="py-2 px-8 bg-yellow-400 text-white font-bold rounded">JOIN</button>
         </div>
-        
       </div>
+      {/* Image below input on mobile */}
+      <img src={ContactPhoto} className='h-96 sm:absolute sm:left-0 sm:bottom-0 sm:block' alt="Contact" />
     </div>
   )
 }

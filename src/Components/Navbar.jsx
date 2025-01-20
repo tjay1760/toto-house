@@ -30,6 +30,22 @@ const Navbar = () => {
               ☰
             </button>
           )}
+
+          {/* Desktop Menu (Always Visible on Larger Screens) */}
+          <ul className="hidden md:flex space-x-8">
+            {["home", "about", "team", "contact"].map((section) => (
+              <li key={section}>
+                <Link
+                  to={section}
+                  smooth={true}
+                  duration={500}
+                  className="text-lg hover:text-blue-400 cursor-pointer"
+                >
+                  {section.charAt(0).toUpperCase() + section.slice(1)}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
 
         {/* Close Button - Positioned where the hamburger was */}
@@ -43,15 +59,15 @@ const Navbar = () => {
           </button>
         )}
 
-        {/* Mobile Menu */}
+        {/* Mobile Menu (Fixed & Centered) */}
         <div 
-          className={`fixed inset-0 flex items-center justify-center transition-transform duration-300 ${
+          className={`fixed inset-0 flex items-center justify-center transition-transform duration-300 bg-gray-900 text-white z-50 ${
             isOpen ? "translate-x-0" : "translate-x-full"
-          }`}
+          } md:hidden`}
         >
-          <div className="bg-gray-900 text-white rounded-lg w-3/4 max-w-sm p-6 text-center shadow-lg">
+          <div className="rounded-lg w-3/4 max-w-sm p-6 text-center shadow-lg">
             {/* Menu Items */}
-            <ul className="flex flex-col space-y-4 mt-8">
+            <ul className="flex flex-col space-y-4">
               {["home", "about", "team", "contact"].map((section) => (
                 <li key={section}>
                   <Link

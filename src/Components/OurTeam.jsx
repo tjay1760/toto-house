@@ -4,7 +4,7 @@ import person2 from "../assets/person-2.jpeg"
 
 const OurTeam = () => {
   return (
-    <div className="min-h-screen w-full bg-gradient-to-b from-cyan-500 to-blue-500 flex flex-col">
+    <div className="team min-h-screen w-full bg-gradient-to-b from-cyan-500 to-blue-500 flex flex-col">
         {/* Divider */}
         <div className='w-full h-4 bg-blue-600'></div>
 
