@@ -1,6 +1,6 @@
 import React from 'react'
-import person1 from "../assets/person-1.jpeg"
-import person2 from "../assets/person-2.jpeg"
+import person1 from "../assets/winnie-photo-crp.jpeg"
+import person2 from "../assets/nandi-photo-crp.jpeg"
 
 const OurTeam = () => {
   return (
@@ -13,19 +13,19 @@ const OurTeam = () => {
           <h1 className='text-4xl font-bold text-center'>Our Team</h1>
           
           {/* Cards Section */}
-          <div className="flex justify-center gap-14">
+          <div className="md:flex justify-center gap-14">
             {/* Person 1 */}
             <div className='flex flex-col items-center gap-2'>
-              <img src={person1} className='h-96 rounded-full border-8 border-pink-600' alt='person1' />
-              <h2 className="text-xl font-semibold">Jane Doe</h2>
-              <p>CEO</p>
+              <img src={person1} className='h-40 w-40 md:h-96 md:w-96  rounded-full border-8 border-pink-600' alt='person1' />
+              <h2 className="text-xl font-bold">Winnie Mangeni</h2>
+              <p>CTO</p>
             </div>
 
             {/* Person 2 */}
             <div className='flex flex-col items-center gap-2'>
-              <img src={person2} className='h-96 rounded-full border-8 border-pink-600' alt='person2' />
-              <h2 className="text-xl font-semibold">Jane Smith</h2>
-              <p className='font-bold text-xl'>CTO</p>
+              <img src={person2} className='h-40 w-40 md:h-96 md:w-96 rounded-full border-8 border-pink-600' alt='person2' />
+              <h2 className="text-xl font-semibold">Nandi</h2>
+              <p className='font-bold text-xl'>CEO</p>
             </div>
           </div>
         </div>
