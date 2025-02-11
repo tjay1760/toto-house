@@ -18,12 +18,12 @@ const Hero = () => {
       <div className="absolute inset-0 bg-black/50" />
 
       {/* Content container */}
-      <div className="relative h-full flex flex-col justify-center items-center text-white">
-        <div className="text-content md:w-2/3">
+      <div className="relative h-full  flex-col justify-center items-center text-white">
+        <div className="text-content md:w-2/3 flex flex-col items-center justify-center mt-20 md:mt-48 md:ml-20 md:p-3 absolute">
         <h1 className=" font-bold text-6xl text-center px-4 z-10 mb-5">
           Little Readers are Little Leaders.
         </h1>
-        <p1>
+        <p1 className="text-xl font-semibold text-center px-4">
           Inspire a love for reading and a passion for change with our global
           library of diverse student stories
         </p1>
