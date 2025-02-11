@@ -21,7 +21,7 @@ const About = () => {
       
       <div className='container w-full flex flex-col items-center'>
         {/* Book Section Title */}
-        <h2 className="text-3xl font-bold text-center bubblegum-sans-regular my-6">Explore Our Books</h2>
+        <h2 className="text-3xl font-bold text-center bubblegum-sans-regular my-6">Sample Our Library</h2>
         
         <div className='flex flex-col md:flex-row sm:w-1/2 items-center justify-center mx-auto my-10 gap-10'>
           {books.map((book, index) => 
