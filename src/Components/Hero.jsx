@@ -12,8 +12,7 @@ const Hero = () => {
         backgroundPosition: "center",
       }}
     >
-      {/* Darkening overlay */}
-      <div className="absolute inset-0 bg-black/50" />
+    
 
       {/* Content container */}
       <div className="relative h-full flex-col justify-center items-center text-white">
