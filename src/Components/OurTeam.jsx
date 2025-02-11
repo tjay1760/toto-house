@@ -11,7 +11,7 @@ const OurTeam = () => {
         <div className='w-full h-4 bg-blue-600'></div>
 
         {/* Content Section */}
-        <div className='flex flex-col justify-center items-center flex-grow text-white border'> 
+        <div className='flex flex-col justify-center items-center flex-grow text-white'> 
           <h1 className='text-4xl font-bold text-center bubblegum-sans-regular '>Our Team</h1>
           
           {/* Cards Section */}
