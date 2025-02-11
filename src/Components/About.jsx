@@ -21,13 +21,23 @@ const About = () => {
       
       <div className='container w-full flex flex-col items-center'>
         {/* Book Section Title */}
-        <h2 className="text-3xl font-bold text-center my-6">Explore Our Books</h2>
+        <h2 className="text-3xl font-bold text-center bubblegum-sans-regular my-6">Sample Our Library</h2>
         
         <div className='flex flex-col md:flex-row sm:w-1/2 items-center justify-center mx-auto my-10 gap-10'>
           {books.map((book, index) => 
             <img src={book.img} key={index} className='h-40' alt={book.title} />
           )}
         </div>
+        
+        {/* Read Book Link */}
+        <a 
+          href="https://externalbooksite.com" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="mt-4 mb-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg shadow-md"
+        >
+          Read Book
+        </a>
       </div>
 
       <img src={AboutPic} className="h-96 md:absolute right-1" alt="About" />
