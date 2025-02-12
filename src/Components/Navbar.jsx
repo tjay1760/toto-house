@@ -33,7 +33,7 @@ const Navbar = () => {
 
           {/* Desktop Menu (Always Visible on Larger Screens) */}
           <ul className="hidden md:flex space-x-8">
-            {["home", "Books", "team", "contact"].map((section) => (
+            {["home", "books", "team", "contact"].map((section) => (
               <li key={section}>
                 <Link
                   to={section}
