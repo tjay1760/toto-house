@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
+body{
+  font-family: "Nunito", serif;
+}
 .bubblegum-sans-regular {
     font-family: "Bubblegum Sans", serif;
   }

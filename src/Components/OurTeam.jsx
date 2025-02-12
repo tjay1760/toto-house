@@ -12,7 +12,7 @@ const OurTeam = () => {
 
         {/* Content Section */}
         <div className='flex flex-col justify-center items-center flex-grow text-white'> 
-          <h1 className='text-4xl font-bold text-center bubblegum-sans-regular '>Our Team</h1>
+          <h1 className='text-4xl font-bold text-center'>Our Team</h1>
           
           {/* Cards Section */}
           <div className="md:flex justify-center gap-28">

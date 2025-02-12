@@ -30,7 +30,7 @@ const About = () => {
 
       <div className="container w-full flex flex-col items-center">
         {/* Book Section Title */}
-        <h2 className="text-3xl font-bold text-center bubblegum-sans-regular my-6">
+        <h2 className="text-3xl font-bold text-center my-6">
           Sample Our Library
         </h2>
 
