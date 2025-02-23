@@ -7,10 +7,10 @@ import Book3 from "../assets/book-3.jpeg";
 import Book4 from "../assets/book-4.jpeg";
 
 const books = [
-  { img: Book1, title: "The Story of Sanji", author: "Nandi Fernandez",bookLink:"https://heyzine.com/flip-book/010dc9722f.html", active: true },
-  { img: Book3, title: "Zayner The Great", author: "Nandi Fernandez",bookLink:"https://heyzine.com/flip-book/c730a40b69.html", active: true },
-  { img: Book2, title: "Daddies and Daughters Stick Together", author: "Nandi Fernandez",bookLink:"", active: false },
-  { img: Book4, title: "Welcome to Balloon City", author: "Nandi Fernandez", bookLink:"", active: false },
+  { img: Book1, title: "The Story of Sanji", author: "Pangea",bookLink:"https://heyzine.com/flip-book/010dc9722f.html", active: true },
+  { img: Book3, title: "Zaynab The Great and the Giant Plastic Mansa", author: "Suzzie Hicks",bookLink:"https://heyzine.com/flip-book/c730a40b69.html", active: true },
+  { img: Book2, title: "Daddies and Daughters Stick Together", author: "Aissatou Diallo",bookLink:"", active: false },
+  { img: Book4, title: "Welcome to Balloon City", author: "Ammon Jordan", bookLink:"", active: false },
 ];
 
 const About = () => {
