@@ -29,8 +29,10 @@ const OurTeam = () => {
               <h2 className="text-xl font-semibold">Winnie Mangeni</h2>
               <p className='font-bold text-xl'>CTO</p>
             </div>
+            
           </div>
         </div>
+        
     </div>
   )
 }
