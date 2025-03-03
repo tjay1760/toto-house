@@ -14,7 +14,6 @@ const Contact = () => {
       </video>
       <h1 className="mt-4 text-2xl">Support Us on  
         <a href='kickstarter.com'> KickStarter</a></h1>
-      <p className="mt-2 text-2xl text-center">We are removing Friction For children and reading</p>
     </div>
   )
 }
