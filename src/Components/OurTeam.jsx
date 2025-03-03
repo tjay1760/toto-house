@@ -6,11 +6,11 @@ import person2 from "../assets/Winnie-raster.png"
 
 const OurTeam = () => {
   return (
-    <div className="team w-full  flex flex-col">
+    <div className="team w-full  flex flex-col text-black" >
       
       <h1 className="mt-2 text-4xl font-bold text-center">We are removing friction For children and reading</h1>
         {/* Content Section */}
-        <div className='flex flex-col justify-center items-center flex-grow text-white'> 
+        <div className='flex flex-col justify-center items-center flex-grow'> 
           <h1 className='text-4xl font-bold text-center'>Our Team</h1>
           
           {/* Cards Section */}
