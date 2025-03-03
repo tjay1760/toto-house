@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import BackgroundImg from "../assets/Hero Mobile.jpeg";
 import BackgroundImgDsk from "../assets/hero-header.jpeg";
+import SignUpModal from "./SignUpModal";
 
 const Hero = () => {
   const [showSignup, setShowSignup] = useState(false);
@@ -33,30 +34,7 @@ const Hero = () => {
       </div>
 
       {/* Signup Modal */}
-      {showSignup && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-          <div className="bg-white p-6 rounded-lg shadow-lg w-96">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Sign Up</h2>
-            <input
-              type="text"
-              placeholder="Name"
-              className="w-full p-2 mb-2 border border-gray-300 rounded"
-            />
-            <input
-              type="email"
-              placeholder="Email"
-              className="w-full p-2 mb-2 border border-gray-300 rounded"
-            />
-            <button className="w-full bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-2 rounded-lg">Submit</button>
-            <button
-              className="w-full mt-2 text-gray-700 hover:text-gray-900"
-              onClick={() => setShowSignup(false)}
-            >
-              Close
-            </button>
-          </div>
-        </div>
-      )}
+      {showSignup && <SignUpModal setShowSignup={setShowSignup} />}
     </div>
   );
 };

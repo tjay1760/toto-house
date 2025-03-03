@@ -1,18 +1,29 @@
 import React from 'react'
-import ContactPhoto from  "../assets/bottom_art.png"
+import TalaVideo from "../assets/Tala-Video.mp4"
+import SignUpModal from './SignUpModal';
+import { useState } from 'react';
 
 const Contact = () => {
+   const [showModal, setShowModal] = useState(false);
+  
+    const handleGetStartedClick = () => {
+      setShowModal(!showModal);
+    };
   return (
-    <div className='contact bg-green-900 flex flex-col sm:flex-row relative items-center justify-center text-white pt-10 md:py-10'>
-      <div className="details flex flex-col gap-10 justify-between items-center text-center">
-        <h1 className='font-bold text-3xl'>Be The First To Know!</h1>
-        <div className="flex flex-col sm:flex-row gap-4 items-center">
-          <input type="email" placeholder="Enter your email" className="p-2 rounded text-black" />
-          <button className="py-2 px-8 bg-yellow-400 text-white font-bold rounded">JOIN</button>
-        </div>
-      </div>
-      {/* Image below input on mobile */}
-      <img src={ContactPhoto} className='h-96 sm:absolute sm:left-0 sm:bottom-0 sm:block' alt="Contact" />
+    <div className='contact py-5 bg-green-900 text-white flex flex-col justify-center items-center min-h-screen'>
+      <button className="w-1/3 md:w-1/6 bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-1 px-2 rounded-lg"
+       onClick={handleGetStartedClick}
+      >
+        Get Started
+      </button>
+      {showModal && <SignUpModal setShowSignup={setShowModal}/>}
+      <h1 className="mt-4 font-bold text-4xl">Introducing Tala</h1>
+      <video className="w-1/2 mt-4 rounded-lg" autoPlay loop muted>
+        <source src={TalaVideo} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <h1 className="mt-4 text-2xl">Support Us on  
+        <a href='kickstarter.com'> KickStarter</a></h1>
     </div>
   )
 }
