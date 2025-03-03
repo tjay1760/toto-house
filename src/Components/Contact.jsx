@@ -10,7 +10,7 @@ const Contact = () => {
       setShowModal(!showModal);
     };
   return (
-    <div className='contact py-5 bg-green-900 text-white flex flex-col justify-center items-center min-h-screen'>
+    <div className='contact py-5 bg-green-900 text-white flex flex-col justify-center items-center'>
       <button className="w-1/3 md:w-1/6 bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-1 px-2 rounded-lg"
        onClick={handleGetStartedClick}
       >

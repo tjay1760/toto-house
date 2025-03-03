@@ -17,12 +17,12 @@ const Hero = () => {
     >
       {/* Blur background when modal is active */}
       <div className={`relative h-full flex-col justify-center items-center text-white ${showSignup ? "backdrop-blur-md" : ""}`}>
-        <div className="text-content md:w-2/4 flex flex-col items-center justify-center mt-10 md:mt-10 md:ml-32 lg:mt-28 lg:ml-48 md:p-3 absolute">
+        <div className="text-content md:w-1/2 flex flex-col items-center justify-center mt-56 md:mt-10 md:ml-32 lg:mt-40 lg:ml-48 md:p-3 absolute">
           <h1 className="font-bold text-3xl mt-8 md:text-5xl text-center px-4 z-10 md:mb-3">
             Little Readers are Little Leaders.
           </h1>
           <p className="md:text-2xl text-base lg:w-2/3 font-semibold text-center px-4">
-            Inspire a love for reading and a passion for change with our global library of diverse student stories.
+            Inspire a love for reading and a passion for change with our global library of diverse children stories.
           </p>
           <button
             className="mt-6 px-6 py-3 bg-yellow-500 hover:bg-yellow-600 text-black font-bold rounded-lg shadow-md"

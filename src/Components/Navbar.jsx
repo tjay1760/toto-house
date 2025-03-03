@@ -18,7 +18,7 @@ const Navbar = () => {
       <nav className="fixed top-0 w-full z-50 text-white bg-transparent">
         <div className="container mx-auto flex justify-between items-center p-4">
           {/* Logo */}
-          <img src={Logo} className="h-10" alt="Logo" />
+          <img src={Logo} className="h-20" alt="Logo" />
           
           {/* Hamburger Menu (Mobile) - Hidden when menu is open */}
           {!isOpen && (
