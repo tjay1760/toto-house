@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { Link } from "react-scroll";
-import Logo from "../assets/white_logo.png"
+import Logo from "../assets/white_logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <>
+    <div className="bg-transparent absolute z-50">
       {/* Blur Background when menu is open */}
       {isOpen && (
         <div 
@@ -14,12 +14,14 @@ const Navbar = () => {
           onClick={() => setIsOpen(false)}
         />
       )}
+
+      {/* Logo positioned absolutely */}
+      <div className="top-0 left-0 p-4">
+        <img src={Logo} className="h-20" alt="Logo" />
+      </div>
       
       <nav className="fixed top-0 w-full z-50 text-white bg-transparent">
-        <div className="container mx-auto flex justify-between items-center p-4">
-          {/* Logo */}
-          <img src={Logo} className="h-20" alt="Logo" />
-          
+        <div className="container mx-auto flex justify-end items-center p-4">
           {/* Hamburger Menu (Mobile) - Hidden when menu is open */}
           {!isOpen && (
             <button 
@@ -85,7 +87,7 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-    </>
+    </div>
   );
 };
 
