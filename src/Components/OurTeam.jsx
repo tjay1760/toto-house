@@ -8,10 +8,10 @@ const OurTeam = () => {
   return (
     <div className="team w-full  flex flex-col text-black" >
       
-      <h1 className="mt-2 text-4xl font-bold text-center">We are removing friction For children and reading</h1>
+      <h1 className="mt-2 text-2xl text-center">We are removing friction For children and reading</h1>
         {/* Content Section */}
         <div className='flex flex-col justify-center items-center flex-grow'> 
-          <h1 className='text-4xl font-bold text-center'>Our Team</h1>
+          <h1 className='text-3xl md:text-4xl font-bold text-center'>Our Team</h1>
           
           {/* Cards Section */}
           <div className="md:flex justify-center gap-28 md:gap-36">
