@@ -6,7 +6,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="bg-backgroundBlue">
+    <div className="bg-transparent absolute z-50">
       {/* Blur Background when menu is open */}
       {isOpen && (
         <div 
@@ -16,7 +16,7 @@ const Navbar = () => {
       )}
 
       {/* Logo positioned absolutely */}
-      <div className="top-0 left-0 p-4 z-50">
+      <div className="top-0 left-0 p-4">
         <img src={Logo} className="h-20" alt="Logo" />
       </div>
       
